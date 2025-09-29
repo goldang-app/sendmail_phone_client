@@ -1,0 +1,16 @@
+[project]
+name = "email-client"
+version = "1.0.0"
+description = "Multi-Device Email Control System - Client Agent"
+requires-python = ">=3.9"
+dependencies = [
+    "aiohttp>=3.9.0",
+    "requests>=2.31.0",
+]
+
+[tool.hatch.build.targets.wheel]
+only-include = ["main.py", "ip_manager.py"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
